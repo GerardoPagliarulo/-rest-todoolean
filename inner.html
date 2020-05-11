@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JS -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
+    <script src="js/main.js"></script>
+    <title>rest-todoolen</title>
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <div class="container">
+        <header>
+            <h1 class="title">Todoolean</h1>
+        </header>
+        <!-- MAIN CONTENT -->
+        <main>
+            <div class="main-insert-todo">
+                <input class="todo-input" type="text" placeholder="Scrivi qui!">
+                <button class="todo-button">Inserisci</button>    
+            </div>
+            <ul class="main-list-todos">
+            </ul>
+        </main>    
+    </div>
+
+
+
+
+    <!-- TEMPLATE HANDLEBARS -->
+    <script id="todo-template" type="text/x-handlebars-template">
+        <li class="todo-item">
+            {{todo}}
+            <i class="far fa-trash-alt" data-id="{{id}}"></i> 
+        </li>
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: rgb(72, 7, 22);
+    color: white;
+}
+
+/* LAYOUT */
+.container {
+    width: 550px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+/* HEADER  */
+.title {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* MAIN */
+.main-insert-todo {
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+}
+
+.todo-input {
+    flex-basis: 80%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background: rgba(255, 255, 255, .65);
+    transition: background .4s;
+}
+
+.todo-input:hover,
+.todo-input:focus {
+    background: #fff;
+}
+
+.todo-button {
+    flex-basis: 10%;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.todo-button:hover {
+    opacity: .65;
+}
+
+.main-list-todos .todo-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    list-style: none;
+    border-bottom: 1.5px solid rgba(255, 255, 255, .5);
+}
+
+.main-list-todos .todo-item:last-child {
+    border: none;
+}
+
+.todo-item i {
+    opacity: .65;
+    transition: opacity .4s;
+    cursor: pointer;
+}
+
+.todo-item i:hover {
+    opacity: 1;
+}
