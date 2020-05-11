@@ -35,13 +35,13 @@ function getTodo(myApi, template, todoList) {
         url: myApi,
         method: 'GET',
         success: function (res) {
-            var todo = res 
+            var todo = res; 
             for (var i = 0; i < todo.length; i++) {
                 var item = todo[i];
                 var content = {
                     todo: item.text,
                     id: item.id
-                }
+                };
                 // Inserire Template
                 var html = template(content);
                 todoList.append(html);
@@ -57,13 +57,13 @@ function getTodo(myApi, template, todoList) {
     };
     $.ajax(settings)
     .done(function (res) {
-        var todo = res 
+        var todo = res; 
         for (var i = 0; i < todo.length; i++) {
             var item = todo[i];
             var content = {
                 todo: item.text,
                 id: item.id
-            }
+            };
             // Inserire Template
             var html = template(content);
             todoList.append(html);
